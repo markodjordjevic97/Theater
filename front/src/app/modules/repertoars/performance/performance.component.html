@@ -1,0 +1,57 @@
+<div class="login-box">
+  <h2>Unesite predstavu</h2>
+  <form [formGroup]="performanceForm" (ngSubmit)="addPerformance()">
+    <div class="user-box">
+      <input formControlName="title" type="text" />
+      <label>Naziv</label>
+    </div>
+    <div class="user-box">
+      <input formControlName="description" type="text" />
+      <label>Opis</label>
+    </div>
+    <div class="user-box">
+      <input formControlName="duration" type="text" />
+      <label>Trajanje</label>
+    </div>
+
+    <div class="select-type">
+      <ng-select
+        [items]="typeGroup"
+        formControlName="type"
+        placeholder="Izaberite vrstu predstave"
+        bindLabel="type"
+        [(ngModel)]="typeModel"
+        (change)="onSelectType($event)"
+        appendTo="body"
+      >
+        <ng-template ng-option-tmp let-item="item">
+          {{ item.type }}
+        </ng-template>
+      </ng-select>
+    </div>
+
+    <div class="select-writer">
+      <ng-select
+        [items]="writerGroup"
+        formControlName="writer"
+        placeholder="Izaberite pisca predstave"
+        bindLabel="name"
+        [(ngModel)]="writerModel"
+        (change)="onSelectWriter($event)"
+        appendTo="body"
+      >
+        <ng-template ng-option-tmp let-item="item">
+          {{ item.name }}
+        </ng-template>
+      </ng-select>
+    </div>
+    <button type="button" (click)="back()" class="button">Nazad</button>
+    <button type="submit">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Potvrdi
+    </button>
+  </form>
+</div>

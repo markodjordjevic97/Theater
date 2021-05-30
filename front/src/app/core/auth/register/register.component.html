@@ -1,0 +1,13 @@
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+  <h1>Kreirajte nalog</h1>
+  <div class="social-container">
+    <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.google.com/gmail/about/" class="social"><i class="fab fa-google-plus-g"></i></a>
+    <a href="https://rs.linkedin.com/" class="social"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  <span>ili koristite Vas email za registraciju</span>
+  <input formControlName="username" type="text" placeholder="Korisnicko ime" autocomplete="on"/>
+  <input formControlName="email" type="email" placeholder="Email" autocomplete="on"/>
+  <input formControlName="password" type="password" placeholder="Sifra" autocomplete="on" />
+  <button type="submit">Kreiraj nalog</button>
+</form>

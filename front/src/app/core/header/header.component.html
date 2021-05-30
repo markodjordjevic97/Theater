@@ -1,0 +1,10 @@
+<nav *ngIf="logUser">
+  <ul class="menuItems">
+    <li><a data-item="Pocetna" [routerLink]="[ '/dashboard']">Pocetna</a></li>
+    <li><a data-item="Predstave" [routerLink]="['/shows']">Predstave</a></li>
+    <li><a data-item="Korpa" [routerLink]="[ '/tickets']">Korpa <span [ngClass]="counterShows !== 0 ? 'show-numbers' : 'hide-numbers'">{{counterShows}}</span></a></li>
+    <li *ngIf="disableRepertoar"><a data-item="repertoar" [routerLink]="[ '/repertoars']">repertoar</a></li>
+    <li><a data-item="Nalog" [routerLink]="[ '/account']">Nalog</a></li>
+    <li (click)="logout()"><a data-item="Odjava">Odjava</a></li>
+  </ul>
+</nav>

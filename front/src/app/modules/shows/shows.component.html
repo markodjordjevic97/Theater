@@ -1,0 +1,9 @@
+<div *ngIf="shows.length > 0">
+  <app-theater-table [data]="shows" [filterDataPlaceholder]="filterPlaceholder">
+  </app-theater-table>
+</div>
+
+<div *ngIf="shows.length == 0">
+  <app-theater-table [data]="shows" [filterDataPlaceholder]="filterPlaceholder">
+  </app-theater-table>
+</div>

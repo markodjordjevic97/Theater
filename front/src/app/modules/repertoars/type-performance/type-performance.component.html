@@ -1,0 +1,20 @@
+<div class="login-box">
+  <h2>Unesite tip predstave</h2>
+  <form [formGroup]="typeForm" (ngSubmit)="addType()">
+    <div class="user-box">
+      <input formControlName="type" type="text" />
+      <label>Tip predstave</label>
+    </div>
+    <button type="button" (click)="back()" class="button">Nazad</button>
+    <button type="button" (click)="preskoci()" class="button button-2">
+      Preskoci
+    </button>
+    <button type="submit">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Potvrdi
+    </button>
+  </form>
+</div>

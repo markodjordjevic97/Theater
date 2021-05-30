@@ -1,0 +1,20 @@
+.button {
+    margin: 0 auto;
+    margin-top: 70px;
+    background-color: #4caf4faf !important; 
+    border-radius: 3px !important;
+    color: #ffffff !important;
+    padding: 10px 16px !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 3px 16px rgba(0,0,0,.3) !important;
+    cursor: pointer !important;
+    position: absolute;
+    right: 5%;
+     &:hover {
+        color: #ffffff7a; 
+        border-radius: 3px;
+        background-color: #4CAF50 !important;
+        box-shadow: none !important;
+     }
+}

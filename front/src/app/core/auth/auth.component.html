@@ -1,0 +1,30 @@
+<div
+  class="container"
+  id="container"
+  [ngClass]="{ 'right-panel-active': switcherState }"
+>
+  <div class="form-container sign-up-container">
+    <app-register></app-register>
+  </div>
+  <div class="form-container sign-in-container">
+    <app-login></app-login>
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Dobro dosli ponovo!</h1>
+        <p>Da bi ste nam se pridruzili, molimo Vas ulogujte se sa Vasim inicijalima</p>
+        <button (click)="toggleSignIn()" class="ghost" id="signIn">
+          Uloguj se
+        </button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Pozdrav !</h1>
+        <p>Unesite Vase podatke i krenite u putovanje sa nama</p>
+        <button (click)="toggleSignUp()" class="ghost" id="signUp">
+          Kreirajte nalog
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+@import "../../account/account.component.scss";
+
+.login-box .user-box {
+  margin-bottom: 0px;
+}
+
+.select-type {
+  margin-top: -15px;
+}
+.select-writer {
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.button {
+  margin-right: 13px;
+  margin-left: -13px;
+  background-color: rgb(157, 41, 51, 0.8) !important;
+  border-radius: 3px;
+  color: #ffffff !important;
+  &:hover {
+    color: #ffffff7a;
+    border-radius: 3px;
+    background-color: #9d2933 !important;
+    box-shadow: none !important;
+  }
+}

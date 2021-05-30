@@ -1,0 +1,25 @@
+<div class="login-box">
+  <div *ngIf="stepCounter === 0">
+    <app-writer (writerEmit)="onWriter($event)"></app-writer>
+  </div>
+  <div *ngIf="stepCounter === 1">
+    <app-type-performance (typeEmit)="onType($event)"></app-type-performance>
+  </div>
+  <div *ngIf="stepCounter === 2">
+    <app-performance (perfromancEmit)="onPerformance($event)"></app-performance>
+  </div>
+  <div class="end" *ngIf="stepCounter === 3">
+    <div class="success-checkmark">
+      <div class="check-icon">
+        <span class="icon-line line-tip"></span>
+        <span class="icon-line line-long"></span>
+        <div class="icon-circle"></div>
+        <div class="icon-fix"></div>
+      </div>
+    </div>
+    <div class="end__text">Uspesno ste uneli predstavu !</div>
+    <button type="button" class="button" (click)="again()">
+      Unesite ponovo
+    </button>
+  </div>
+</div>
